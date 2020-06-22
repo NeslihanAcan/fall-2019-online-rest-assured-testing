@@ -36,8 +36,8 @@ public class POJOPracticeWithSpartanApp {
          */
 
         Map<String, String> spartan = new HashMap<>();
-        spartan.put("gender", "Male");
-        spartan.put("name", "Nursultan");
+        spartan.put("gender", "female");
+        spartan.put("name", "Neslihan");
         spartan.put("phone", "123112312312");
 
         RequestSpecification requestSpecification = given().
@@ -72,14 +72,14 @@ public class POJOPracticeWithSpartanApp {
     @DisplayName("Retrieve exiting user, update his name and verify that name was updated successfully.")
     public void updateSpartanTest(){
         int userToUpdate = 101;
-        String name = "Nursultan";
+        String name = "Neslihan";
 
         //HTTP PUT request to update exiting record, for example exiting spartan.
         //PUT - requires to provide ALL parameters in body
         //PUT requires same body as POST
         //If you miss at least one parameter, it will not work
 
-        Spartan spartan = new Spartan(name, "Male", 123112312312L);
+        Spartan spartan = new Spartan(name, "Female", 123112312312L);
 
         //get spartan from web service
         Spartan spartanToUpdate = given().
